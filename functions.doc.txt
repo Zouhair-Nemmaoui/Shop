@@ -1,0 +1,9 @@
+============
+== Functions Document ==
+============
+
+
+
+getAllFrom($field , $table, $where = NULL, $and = NULL, $orderfield, $ordering = DSC )
+
+$where kann noch frei
