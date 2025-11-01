@@ -1,0 +1,54 @@
+@charset "UTF-8";
+.toggler-wrapper {
+	display: flex;
+	align-items: center;
+	width: 150px; /* Ajustez la largeur selon vos besoins */
+	height: 25px;
+	cursor: pointer;
+	position: relative;
+    padding: 5px;
+
+}
+
+.toggler-wrapper input[type="checkbox"] {
+	display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked + .toggler-slider {
+	background-color: #44cc66;
+}
+
+.toggler-wrapper .toggler-slider {
+	background-color: #ccc;
+	position: relative;
+	border-radius: 100px;
+	width: 45px; /* Largeur du slider */
+	height: 25px; /* Hauteur du slider */
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.toggler-wrapper .toggler-knob {
+	position: absolute;
+	width: calc(25px - 6px);
+	height: calc(25px - 6px);
+	border-radius: 50%;
+	background-color: #fff;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-1 input[type="checkbox"]:checked + .toggler-slider .toggler-knob {
+	left: calc(100% - (25px - 6px) - 3px);
+}
+
+.toggler-wrapper.style-1 .toggler-knob {
+	left: 3px;
+}
+
+.badge {
+	margin-left: 10px; /* Espacement entre le slider et le badge */
+}
